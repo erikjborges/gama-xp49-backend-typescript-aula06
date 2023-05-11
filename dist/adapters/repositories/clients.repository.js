@@ -15,6 +15,12 @@ class ClientsRepository {
         this._database = _database;
         this._type = 'client';
     }
+    create(resource) {
+        return __awaiter(this, void 0, void 0, function* () {
+            resource.indexId = this._database.create(this._type, resource);
+            return resource;
+        });
+    }
     list() {
         return __awaiter(this, void 0, void 0, function* () {
             return this._database.list(this._type);
@@ -22,4 +28,4 @@ class ClientsRepository {
     }
 }
 exports.default = new ClientsRepository(array_database_1.ArrayDatabase.getInstance());
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xpZW50cy5yZXBvc2l0b3J5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL2FkYXB0ZXJzL3JlcG9zaXRvcmllcy9jbGllbnRzLnJlcG9zaXRvcnkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFFQSxvRkFBZ0Y7QUFHaEYsTUFBTSxpQkFBaUI7SUFHbkIsWUFBb0IsU0FBb0I7UUFBcEIsY0FBUyxHQUFULFNBQVMsQ0FBVztRQUZoQyxVQUFLLEdBQVcsUUFBUSxDQUFDO0lBSWpDLENBQUM7SUFFSyxJQUFJOztZQUNOLE9BQU8sSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQzNDLENBQUM7S0FBQTtDQUNKO0FBRUQsa0JBQWUsSUFBSSxpQkFBaUIsQ0FDaEMsOEJBQWEsQ0FBQyxXQUFXLEVBQUUsQ0FDOUIsQ0FBQSJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xpZW50cy5yZXBvc2l0b3J5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL2FkYXB0ZXJzL3JlcG9zaXRvcmllcy9jbGllbnRzLnJlcG9zaXRvcnkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFFQSxvRkFBZ0Y7QUFHaEYsTUFBTSxpQkFBaUI7SUFHbkIsWUFBb0IsU0FBb0I7UUFBcEIsY0FBUyxHQUFULFNBQVMsQ0FBVztRQUZoQyxVQUFLLEdBQVcsUUFBUSxDQUFDO0lBSWpDLENBQUM7SUFFSyxNQUFNLENBQUMsUUFBdUI7O1lBQ2hDLFFBQVEsQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLEtBQUssRUFBRSxRQUFRLENBQUMsQ0FBQztZQUMvRCxPQUFPLFFBQVEsQ0FBQztRQUNwQixDQUFDO0tBQUE7SUFFSyxJQUFJOztZQUNOLE9BQU8sSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQzNDLENBQUM7S0FBQTtDQUNKO0FBRUQsa0JBQWUsSUFBSSxpQkFBaUIsQ0FDaEMsOEJBQWEsQ0FBQyxXQUFXLEVBQUUsQ0FDOUIsQ0FBQSJ9

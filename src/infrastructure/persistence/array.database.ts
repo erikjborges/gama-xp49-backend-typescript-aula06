@@ -30,4 +30,18 @@ export class ArrayDatabase implements IDatabase{
 
         return objs;
     }
+
+    create(type: string, data: any): number {
+        let obj: any;
+
+        if(this._data[type] === undefined) {
+            this._data[type] = [];
+        }
+
+        data.indexId = this._data[type].length;
+        obj = data;
+        this._data[type].push(obj);
+
+        return obj.indexId;
+    }
 }

@@ -10,6 +10,11 @@ class ClientsRepository implements IClientsRepository {
         
     }
 
+    async create(resource: ClienteEntity): Promise<ClienteEntity> {
+        resource.indexId = this._database.create(this._type, resource);
+        return resource;
+    }
+
     async list(): Promise<ClienteEntity[]> {
         return this._database.list(this._type);
     }

@@ -9,7 +9,8 @@ export class ClientsRoutes extends CommonRoutesConfig{
 
     configureRoutes(): express.Application {
         this.app.route(`/clients`)
-                .get(clientsController.listClients);
+                .get(clientsController.listClients)
+                .post(clientsController.createClient);
 
         return this.app;
     }
